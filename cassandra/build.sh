@@ -32,9 +32,8 @@ echo "DONE"
 echo ""
 rm ${ARCHIVE}
 
-cd ${DIRNAME}
 echo -n "Building cassandra ... "
-/bin/cassandra
+/${DIRNAME}/bin/cassandra
 if test $? -ne 0; then
   echo ""
   echo "Unable to build ${APPNAME}"
