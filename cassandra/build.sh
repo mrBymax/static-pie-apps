@@ -33,4 +33,10 @@ echo ""
 rm ${ARCHIVE}
 
 cd ${DIRNAME}
-bin/cqlsh
+echo -n "Building cassandra ... "
+/bin/cassandra
+if test $? -ne 0; then
+  echo ""
+  echo "Unable to build ${APPNAME}"
+  exit 1
+fi
