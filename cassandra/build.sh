@@ -29,7 +29,8 @@ if test $? -ne 0; then
 fi
 echo "DONE"
 
-cd ${DIRNAME}
-/bin/cassandra -f
+echo ""
+rm ${ARCHIVE}
 
+cd ${DIRNAME}
 bin/cqlsh
